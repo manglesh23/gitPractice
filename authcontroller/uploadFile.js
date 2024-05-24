@@ -29,7 +29,7 @@ const uploadFile=async(req,res)=>{
         console.log("Converted File:-", convertedFile);
         console.log("Length:-",convertedFile.length);
         res.status(200).json({ message: `File Upload and data is ${convertedFile.length}` });
-   
+       //to convert csv file into JSON, first file should be uploaded on local machine and then get the path of it to convert it json
        
     }catch(e){
         console.error(e);
