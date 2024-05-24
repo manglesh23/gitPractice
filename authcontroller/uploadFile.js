@@ -28,8 +28,7 @@ const uploadFile=async(req,res)=>{
         let convertedFile = await convertCSVtoJSON(req.file.path);
         console.log("Converted File:-", convertedFile);
         console.log("Length:-",convertedFile.length);
-      
-        res.status(200).json({ message: "File Upload" });
+        res.status(200).json({ message: `File Upload and data is ${convertedFile.length}` });
    
        
     }catch(e){
